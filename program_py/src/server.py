@@ -7,15 +7,16 @@ import face_recognition
 from datetime import datetime
 
 # Search data image
-path = 'src/image'
+path = './src/image'
+fileAttendance = './src/Attendance.csv'
 images = []
 className = []
 myList = os.listdir(path)
 
-for cls in myList:
-    curImg = cv2.imread(f'{path}/{cls}')
+for listFile in myList:
+    curImg = cv2.imread(f"{path}/{listFile}")
     images.append(curImg)
-    className.append(os.path.splitext(cls)[0])
+    className.append(os.path.splitext(listFile)[0])
 
 # View list in terminal
 print(className)
@@ -40,7 +41,7 @@ def findEncode(images):
 
 # Create function attendance (Attendance Information)
 def markAttendance(name):
-    with open('src/Attendance.csv', 'r+') as f:
+    with open(fileAttendance, 'r+') as f:
         myDataList = f.readlines()
         nameList = []
         for line in myDataList:
