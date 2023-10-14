@@ -96,4 +96,8 @@ while True:
 
     # Activate the webcam (camera)
     cv2.imshow('Webcam (not filter)',img)
-    cv2.waitKey(1)
+    key=cv2.waitKey(5)
+    if key==ord('q'):
+        break
+cv2.destroyAllWindows()
+cv2.imread
