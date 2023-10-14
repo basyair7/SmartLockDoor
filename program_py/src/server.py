@@ -7,8 +7,8 @@ import face_recognition
 from datetime import datetime
 
 # Search data image
-path = './src/image'
-fileAttendance = './src/Attendance.csv'
+path = 'src/image'
+fileAttendance = 'src/Attendance.csv'
 images = []
 className = []
 myList = os.listdir(path)
